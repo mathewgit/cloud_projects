@@ -334,36 +334,6 @@ docker compose up
 | Nginx | Web server used to serve the frontend |
 | MongoDB | Database used to save data |
 
-## Upload This Project to GitHub
-
-### 1. Initialize Git
-
-```bash
-git init
-git add .
-git commit -m "Initial MERN Docker beginner project"
-```
-
-### 2. Create a GitHub Repository
-
-Suggested repository name:
-
-```text
-mern-docker-beginner-project
-```
-
-Create an empty repository on GitHub without adding a README, license, or `.gitignore`, because those are already included locally.
-
-### 3. Connect the Remote
-
-Replace the example URL with your own repository URL:
-
-```bash
-git remote add origin https://github.com/YOUR-USERNAME/mern-docker-beginner-project.git
-git branch -M main
-git push -u origin main
-```
-
 ## Future Improvements
 
 - Add a screenshot of the running app
