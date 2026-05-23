@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Pull Code') {
+            steps {
+                echo 'Code pulled from GitHub'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t project02-nginx-app .'
+            }
+        }
+
+        stage('Stop Old Container') {
+            steps {
+                sh 'docker rm -f project02-container || true'
+            }
+        }
+
+        stage('Run New Container') {
+            steps {
+                sh 'docker run -d -p 8001:80 --name project02-container project02-nginx-app'
+            }
+        }
+    }
+}
